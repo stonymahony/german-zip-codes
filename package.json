@@ -1,0 +1,22 @@
+{
+  "name": "german-postal-code",
+  "version": "1.0.0",
+  "description": "Small, lightweight utility to get, match and validate german postal codes with districts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "german zip codes",
+    "postal codes",
+    "zip codes",
+    "postleitzahl",
+    "plz"
+  ],
+  "author": "stonymahony",
+  "license": "MIT",
+  "dependencies": {
+    "make-runnable": "^1.3.6"
+  }
+}
