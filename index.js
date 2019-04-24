@@ -33,6 +33,19 @@ function getStates() {
     return states;
 }
 
+function getZipCodesByZipCode(zipCode) {
+    let zipCodes = [];
+
+    for (const entry of data.data) {
+        const plz = entry.plz.toString();
+        if(plz.startsWith(zipCode)) {
+            zipCodes.push(entry.plz);
+        }
+    }
+
+    return zipCodes;
+}
+
 function getZipCodesByDistrict(district) {
     let zipCodesByDistrict = [];
 
@@ -61,6 +74,7 @@ module.exports = {
     getZipCodes,
     getDistricts,
     getStates,
+    getZipCodesByZipCode,
     getZipCodesByDistrict,
     getDistrictsByZipCode
 };
