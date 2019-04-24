@@ -6,7 +6,7 @@ It has no dependencies, so it can run both in node.js server environment and in 
 npm i german-zip-codes
 
 ## Usage
-If their is no match, an empty array will be returned.
+If there is no match, an empty array will be returned.
 Their are no error handling implemented yet.
 
 const zipCode = require('german-zip-codes')
