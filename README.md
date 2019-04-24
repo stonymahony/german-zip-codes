@@ -1,5 +1,6 @@
 # german-zip-codes
 Small, lightweight utility to get, match and validate german postal codes with districts.
+It has no dependencies, so it can run both in node.js server environment and in browsers with e.g. Angular.
 
 ## Installation
 npm i german-zip-codes
