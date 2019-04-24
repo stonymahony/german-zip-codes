@@ -14,7 +14,7 @@ function getZipCodes() {
     return zipCodes;
 }
 
-function getDistricts(sort) {
+function getDistricts(sort = false) {
     let districts = [];
 
     for (const entry of data.data) {
@@ -37,7 +37,7 @@ function getZipCodesByDistrict(district) {
     let zipCodesByDistrict = [];
 
     for (const entry of data.data) {
-        if (entry.ort === district && !zipCodesByDistrict.includes(entry.plz)) {
+        if (entry.ort.includes(district) && !zipCodesByDistrict.includes(entry.plz)) {
             zipCodesByDistrict.push(entry.plz);
         }
     }
@@ -45,11 +45,11 @@ function getZipCodesByDistrict(district) {
     return zipCodesByDistrict;
 }
 
-function getDistrictsByZipCode(district) {
+function getDistrictsByZipCode(zipCode) {
     let districtsByZipCode = [];
 
     for (const entry of data.data) {
-        if (entry.plz === district && !districtsByZipCode.includes(entry.ort)) {
+        if (entry.plz.toString().includes(zipCode.toString()) && !districtsByZipCode.includes(entry.ort)) {
             districtsByZipCode.push(entry.ort);
         }
     }
@@ -64,5 +64,3 @@ module.exports = {
     getZipCodesByDistrict,
     getDistrictsByZipCode
 };
-
-require('make-runnable');
