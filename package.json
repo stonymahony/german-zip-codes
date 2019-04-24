@@ -1,5 +1,5 @@
 {
-  "name": "german-postal-code",
+  "name": "german-zip-codes",
   "version": "1.0.0",
   "description": "Small, lightweight utility to get, match and validate german postal codes with districts.",
   "main": "index.js",
