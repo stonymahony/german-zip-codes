@@ -7,7 +7,7 @@ npm i german-zip-codes
 
 ## Usage
 If there is no match, an empty array will be returned.
-Their are no error handling implemented yet.
+There are no error handling implemented yet.
 
 const zipCode = require('german-zip-codes')
 
