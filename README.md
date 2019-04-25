@@ -20,7 +20,7 @@ const zipCode = require('german-zip-codes')
 * zipCode.getZipCodesByDistrict(district): Returns all zip codes matching given district. Match is checked via include(), so you can also search incomplete district strings.
 * zipCode.getDistrictsByZipCode(zipCode): Returns all districts matching given zipCode. Match is checked via include(), so you can also search incomplete district strings.
 
-## Issues & 
+## Issues & Improvements
 You can report issues or submit ideas for improvements to the github [repo](https://github.com/stonymahony/german-zip-codes). 
 
 ## License
