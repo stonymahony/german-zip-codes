@@ -5,3 +5,8 @@ script:
   - npm run lint
 notifications:
   email: false
+deploy:
+  provider: npm
+  email: $npm-email
+  api_key: $npm-token
+

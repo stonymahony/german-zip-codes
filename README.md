@@ -1,4 +1,6 @@
 # german-zip-codes
+[![Build Status](https://travis-ci.org/stonymahony/german-zip-codes.svg?branch=master)](https://travis-ci.org/stonymahony/german-zip-codes)
+
 Small, lightweight utility to get, match and validate german postal codes with districts.
 It has no dependencies, so it can run both in node.js server environment and in browsers with e.g. Angular.
 
