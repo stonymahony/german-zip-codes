@@ -4,7 +4,7 @@
   "description": "Small, lightweight utility to get, match and validate german postal codes with districts.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard --fix",
     "start": "node index.js"
   },
   "keywords": [
@@ -15,7 +15,12 @@
     "plz"
   ],
   "author": "stonymahony",
+  "bugs": {
+    "url": "https://github.com/stonymahony/german-zip-codes/issues"
+  },
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^12.0.1"
   }
 }

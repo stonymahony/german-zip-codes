@@ -4,77 +4,77 @@ const data = require('./data/data');
 
 const states = ['Baden-Württemberg', 'Bayern', 'Berlin', 'Brandenburg', 'Bremen', 'Hamburg', 'Hessen', 'Mecklenburg-Vorpommern', 'Niedersachsen', 'Nordrhein-Westfalen', 'Rheinland-Pfalz', 'Saarland', 'Sachsen', 'Sachsen-Anhalt', 'Schleswig-Holstein', 'Thüringen'];
 
-function getZipCodes() {
-    let zipCodes = [];
+function getZipCodes () {
+  let zipCodes = [];
 
-    for (const entry of data.data) {
-        zipCodes.push(entry.plz);
-    }
+  for (const entry of data.data) {
+    zipCodes.push(entry.plz)
+  }
 
-    return zipCodes;
+  return zipCodes
 }
 
-function getDistricts(sort = false) {
-    let districts = [];
+function getDistricts (sort = false) {
+  let districts = [];
 
-    for (const entry of data.data) {
-        districts.push(entry.ort);
-    }
+  for (const entry of data.data) {
+    districts.push(entry.ort)
+  }
 
-    if (!sort) {
-        return districts;
-    } else {
-        districts.sort();
-        return districts;
-    }
+  if (!sort) {
+    return districts
+  } else {
+    districts.sort();
+    return districts
+  }
 }
 
-function getStates() {
-    return states;
+function getStates () {
+  return states
 }
 
-function getZipCodesByZipCode(zipCode) {
-    let zipCodes = [];
+function getZipCodesByZipCode (zipCode) {
+  let zipCodes = [];
 
-    for (const entry of data.data) {
-        const plz = entry.plz.toString();
-        if(plz.startsWith(zipCode)) {
-            zipCodes.push(entry.plz);
-        }
+  for (const entry of data.data) {
+    const plz = entry.plz.toString();
+    if (plz.startsWith(zipCode)) {
+      zipCodes.push(entry.plz)
     }
+  }
 
-    return zipCodes;
+  return zipCodes
 }
 
-function getZipCodesByDistrict(district) {
-    let zipCodesByDistrict = [];
+function getZipCodesByDistrict (district) {
+  let zipCodesByDistrict = [];
 
-    for (const entry of data.data) {
-        if (entry.ort.includes(district) && !zipCodesByDistrict.includes(entry.plz)) {
-            zipCodesByDistrict.push(entry.plz);
-        }
+  for (const entry of data.data) {
+    if (entry.ort.includes(district) && !zipCodesByDistrict.includes(entry.plz)) {
+      zipCodesByDistrict.push(entry.plz)
     }
+  }
 
-    return zipCodesByDistrict;
+  return zipCodesByDistrict
 }
 
-function getDistrictsByZipCode(zipCode) {
-    let districtsByZipCode = [];
+function getDistrictsByZipCode (zipCode) {
+  let districtsByZipCode = [];
 
-    for (const entry of data.data) {
-        if (entry.plz.toString().includes(zipCode.toString()) && !districtsByZipCode.includes(entry.ort)) {
-            districtsByZipCode.push(entry.ort);
-        }
+  for (const entry of data.data) {
+    if (entry.plz.toString().includes(zipCode.toString()) && !districtsByZipCode.includes(entry.ort)) {
+      districtsByZipCode.push(entry.ort)
     }
+  }
 
-    return districtsByZipCode;
+  return districtsByZipCode
 }
 
 module.exports = {
-    getZipCodes,
-    getDistricts,
-    getStates,
-    getZipCodesByZipCode,
-    getZipCodesByDistrict,
-    getDistrictsByZipCode
+  getZipCodes,
+  getDistricts,
+  getStates,
+  getZipCodesByZipCode,
+  getZipCodesByDistrict,
+  getDistrictsByZipCode
 };
